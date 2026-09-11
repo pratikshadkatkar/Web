@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Operations</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: lightblue;
+        }
+
+        img {
+            width: 250px;
+            height: 150px;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Heading -->
+    <h1 id="heading">Original Heading</h1>
+
+    <!-- Paragraph -->
+    <p id="paragraph">
+        This is the original paragraph.
+    </p>
+
+    <!-- Text Content -->
+    <p id="text">Original text</p>
+
+    <!-- Image -->
+    <img
+        id="myImage"
+        src="https://via.placeholder.com/250x150"
+        alt="Original Image">
+
+    <br>
+
+    <!-- Hyperlink -->
+    <a
+        id="myLink"
+        href="https://www.google.com"
+        target="_blank">
+        Visit Google
+    </a>
+
+    <br><br>
+
+    <button onclick="changeContent()">
+        Perform DOM Operations
+    </button>
+
+
+    <script>
+
+        function changeContent() {
+
+            // 1. Change heading using innerHTML
+            document.getElementById("heading").innerHTML =
+                "Welcome to DOM Manipulation";
+
+            // 2. Change paragraph using innerText
+            document.getElementById("paragraph").innerText =
+                "Paragraph changed using innerText.";
+
+            // 3. Display text using textContent
+            document.getElementById("text").textContent =
+                "This text is displayed using textContent.";
+
+            // 4. Change text color
+            document.getElementById("paragraph").style.color =
+                "blue";
+
+            // 5. Change font size
+            document.getElementById("paragraph").style.fontSize =
+                "22px";
+
+            // 6. Change image dynamically
+            document.getElementById("myImage").src =
+                "https://via.placeholder.com/250x150/ff9900/ffffff?text=New+Image";
+
+            // 7. Change hyperlink dynamically
+            document.getElementById("myLink").href =
+                "https://www.w3schools.com";
+
+            document.getElementById("myLink").textContent =
+                "Visit W3Schools";
+
+            alert("DOM operations completed!");
+
+        }
+
+    </script>
+
+</body>
+</html>
+

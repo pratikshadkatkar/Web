@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dynamic Webpage</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: lightblue;
+            padding: 30px;
+        }
+
+        .box {
+            width: 600px;
+            margin: auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        img {
+            width: 300px;
+            height: 180px;
+            margin: 20px;
+        }
+
+        a {
+            font-size: 18px;
+            color: blue;
+        }
+
+        button {
+            padding: 12px 25px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* New CSS class */
+        .newStyle {
+            background-color: lightgreen;
+            color: darkred;
+            font-size: 25px;
+            border: 3px solid darkgreen;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box" id="mainBox">
+
+        <!-- Heading -->
+        <h1 id="heading">
+            Original Heading
+        </h1>
+
+        <!-- Paragraph -->
+        <p id="paragraph">
+            This is the original paragraph of the webpage.
+        </p>
+
+        <!-- Image -->
+        <img
+            id="myImage"
+            src="https://via.placeholder.com/300x180"
+            alt="Original Image">
+
+        <br>
+
+        <!-- Hyperlink -->
+        <a
+            id="myLink"
+            href="https://www.google.com"
+            target="_blank">
+            Visit Google
+        </a>
+
+        <br><br>
+
+        <!-- Button -->
+        <button onclick="changePage()">
+            Change Webpage
+        </button>
+
+    </div>
+
+
+    <script>
+
+        function changePage() {
+
+            // 1. Change heading text
+            document.getElementById("heading").innerHTML =
+                "Welcome to JavaScript DOM";
+
+            // 2. Change paragraph content
+            document.getElementById("paragraph").innerText =
+                "The webpage has been changed dynamically using JavaScript.";
+
+            // 3. Change image
+            document.getElementById("myImage").src =
+                "https://via.placeholder.com/300x180/00aa00/ffffff?text=JavaScript";
+
+            // 4. Change hyperlink
+            document.getElementById("myLink").href =
+                "https://www.w3schools.com/javascript/";
+
+            document.getElementById("myLink").innerText =
+                "Learn JavaScript";
+
+            // 5. Change background color
+            document.body.style.backgroundColor =
+                "lightyellow";
+
+            // 6. Change font size
+            document.getElementById("paragraph").style.fontSize =
+                "24px";
+
+            // 7. Change CSS class
+            document.getElementById("heading").className =
+                "newStyle";
+
+            // Alert message
+            alert("Webpage changed successfully!");
+
+        }
+
+    </script>
+
+</body>
+</html>

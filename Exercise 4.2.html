@@ -1,0 +1,140 @@
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+        }
+
+        .form-box {
+            width: 400px;
+            margin: 50px auto;
+            padding: 25px;
+            background-color: white;
+            border: 2px solid darkblue;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-box">
+
+        <h2>Student Registration Form</h2>
+
+        <!-- onsubmit Event -->
+        <form onsubmit="return validateForm()">
+
+            <label>Name:</label>
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+            >
+
+            <label>Email:</label>
+            <input
+                type="text"
+                id="email"
+                placeholder="Enter your email"
+            >
+
+            <!-- onmouseover Event -->
+            <button
+                type="submit"
+                onmouseover="showMessage()"
+                onclick="buttonClick()">
+                Submit
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <script>
+
+        // Name and Email Validation
+        function validateForm() {
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+
+            // Name validation
+            if (name == "") {
+                alert("Please enter your name.");
+                return false;
+            }
+
+            // Email validation
+            if (email == "") {
+                alert("Please enter your email.");
+                return false;
+            }
+
+            // Simple email validation
+            let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            alert("Registration successful!");
+
+            return true;
+        }
+
+
+        // onclick Event
+        function buttonClick() {
+            alert("Submit button clicked!");
+        }
+
+
+        // onmouseover Event
+        function showMessage() {
+            console.log("Mouse is over the Submit button.");
+        }
+
+    </script>
+
+</body>
+
+</html>
+```

@@ -1,0 +1,109 @@
+
+/* Gradient Background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        lightblue,
+        violet
+    );
+}
+
+/* Main Container */
+.container {
+    width: 70%;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: white;
+    text-align: center;
+    border-radius: 15px;
+}
+
+/* Styled Heading */
+h1 {
+    color: darkblue;
+    font-family: Georgia, serif;
+    font-size: 40px;
+}
+
+/* Styled Paragraph */
+p {
+    color: darkgreen;
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Button */
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 6px;
+
+    /* Transition */
+    transition: 0.3s;
+}
+
+/* Button Hover Effect */
+button:hover {
+    transform: scale(1.1);
+    background-color: purple;
+}
+
+/* Transform Box */
+.transform-box {
+    width: 150px;
+    height: 100px;
+    margin: 40px auto;
+
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+
+    /* Transform */
+    transition: 0.5s;
+}
+
+/* Transform on Hover */
+.transform-box:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* Rotating Animated Box */
+.rotating-box {
+    width: 100px;
+    height: 100px;
+    margin: 40px auto;
+
+    background-color: crimson;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+
+    /* Animation */
+    animation: rotateBox 3s linear infinite;
+}
+
+/* Keyframes */
+@keyframes rotateBox {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
