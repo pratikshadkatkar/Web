@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <title>Document Object Manipulation</title>
+<style>
+       #box{
+        text-align:center;
+       }
+
+       img{
+        width:300px;
+        height:200px;
+       }
+</style>
+</head>
+<body>
+<div id="box">
+    <h2 id="heading">WELCOME STUDENTS</h2>
+
+    <p id="paragraph">This is a Document Object Model Manipulation</p>
+
+    <img id="image" src="https://as2.ftcdn.net/v2/jpg/16/09/60/45/1000_F_1609604519_IOKtWlM6FxP1ls61lDpLIBZbd9OdpP7K.jpg">
+    <br><br>
+    <a id="link" href="">link image</a>
+    <br><br>
+
+    <button onclick="changecontent()">Change content </button>
+    <button onclick="changeimage()">Change image</button>
+    <button onclick="changelink()">Change link</button>
+    <button onclick="changeclass()">Change class</button>
+
+</div>
+
+    <script>
+            function changecontent(){
+                document.getElementById("heading").innerHTML="Hello Student";
+                document.getElementById("paragraph").innerHTML="The Content has been changed using JavaScript";
+               }
+
+            function changeimage(){
+                document.getElementById("image").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ0-IQk02pPePWwydJxfjq-BwgBKmqZQdyc8LP_bAZlPSInHoVV9Nu4oVt&s=10";
+               }
+            function changelink(){
+                document.getElementById("link").href="https://www.google.com";
+                document.getElementById("link").innerHTML="Visit Google";
+                }
+            
+            function changeclass(){
+                document.getElementById("box").style.backgroundColor="lightblue";
+                document.getElementById("box").style.color="darkblue";
+               }
+
+</script>
+</body>
+</html>
